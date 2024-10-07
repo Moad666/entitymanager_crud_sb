@@ -12,5 +12,6 @@ public interface StudentDao {
 	public List<Student> getByName(String firstName);
 	public List<Student> getByLastName(String lastName);
 	public void update(String firstName, int id);
+	public void delete(int id);
 	
 }

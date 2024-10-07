@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Student;
@@ -53,5 +52,10 @@ public class StudentController {
 	public void update(@PathVariable int id, @RequestBody Student student) {
 		String firstName =  student.getFirstName();
 		sdi.update(firstName, id);
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	public void delete(@PathVariable int id) {
+		sdi.delete(id);
 	}
 }

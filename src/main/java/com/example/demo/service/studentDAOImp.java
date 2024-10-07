@@ -72,6 +72,14 @@ public class studentDAOImp implements StudentDao{
 		query.setParameter("firstName", firstName);
 		int rowsUpdated = query.executeUpdate();
 	}
+
+	@Override
+	@Transactional
+	public void delete(int id) {
+		Query query = entitymanager.createQuery("DELETE FROM Student WHERE id= :id");
+		query.setParameter("id", id);
+		int rowsDelete = query.executeUpdate();
+	}
 	
 	
 	
