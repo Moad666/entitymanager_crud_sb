@@ -76,6 +76,9 @@ public class studentDAOImp implements StudentDao{
 	@Override
 	@Transactional
 	public void delete(int id) {
+		/*Student std = entitymanager.find(Student.class, 1);
+		entitymanager.remove(std);*/
+		
 		Query query = entitymanager.createQuery("DELETE FROM Student WHERE id= :id");
 		query.setParameter("id", id);
 		int rowsDelete = query.executeUpdate();

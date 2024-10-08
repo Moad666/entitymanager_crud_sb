@@ -20,9 +20,9 @@ public class DemoApplication {
 	@Bean
 	public CommandLineRunner clr(StudentDao studentdao) {
 		return runner -> {
-			createStudents(studentdao);
-			readStudents(studentdao);
-			getAllStudents(studentdao);
+			//createStudents(studentdao);
+			//readStudents(studentdao);
+			//getAllStudents(studentdao);
 			//getByName(studentdao);
 		};
 		
